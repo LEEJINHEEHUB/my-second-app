@@ -3,7 +3,15 @@ const app = express();
 const port = process.env.PORT || 3000;
 // http://127.0.0.1:3000/
 app.get('/', (req, res) => res.send(' 하은~~ 손발 따듯하게 푹 자고 내가 많이 사랑해♥ '));
-app.get('/img',function (req, res) {
+
+app.get('/main',function (req, res) {
+    fs.readFile('main.html', function (error, data) {
+        res.writeHead(200, { 'Content-Type': 'text.html' });
+        res.end(data);
+    });
+});
+
+app.get('/imgs',function (req, res) {
     fs.readFile('imgs.jpg', function (error, data) {
         res.writeHead(200, { 'Content-Type': 'text.html' });
         res.end(data);
