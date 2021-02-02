@@ -2,8 +2,8 @@ const express = require('express')
 const app = express();
 const port = process.env.PORT || 3000;
 // http://127.0.0.1:3000/
-app.get('/', (req, res) => res.send('Hello, Nodejs!'));
-// http://127.0.0.1:3000/welxome?name=jinhee
+app.get('/', (req, res) => res.send('Hello, Nodejs!!!!!'));
+// http://127.0.0.1:3000/welcome?name=jinhee
 app.get('/welcome', (req, res) => {
     var user_name = req.param('name');
     res.sendStatus('Hi there. Welcome to the Nodejs service [' + user_name + ']');
